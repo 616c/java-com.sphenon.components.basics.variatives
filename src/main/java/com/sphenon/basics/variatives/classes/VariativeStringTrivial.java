@@ -1,7 +1,7 @@
 package com.sphenon.basics.variatives.classes;
 
 /****************************************************************************
-  Copyright 2001-2018 Sphenon GmbH
+  Copyright 2001-2024 Sphenon GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License"); you may not
   use this file except in compliance with the License. You may obtain a copy
@@ -49,6 +49,14 @@ public class VariativeStringTrivial implements VariativeString {
 
     public String getVariant_String_ (CallContext context, VariantSelectors variant_selectors) {
         return text;
+    }
+
+    public String getVariant(CallContext context) {
+        return this.getVariant_String_(context);
+    }
+
+    public String getVariant(CallContext context, VariantSelectors variant_selectors) {
+        return this.getVariant_String_(context, variant_selectors);
     }
 
     public String toString () {

@@ -1,7 +1,7 @@
-package com.sphenon.basics.exception;
+package com.sphenon.basics.variatives;
 
 /****************************************************************************
-  Copyright 2001-2018 Sphenon GmbH
+  Copyright 2001-2024 Sphenon GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License"); you may not
   use this file except in compliance with the License. You may obtain a copy
@@ -13,5 +13,11 @@ package com.sphenon.basics.exception;
   License for the specific language governing permissions and limitations
   under the License.
 *****************************************************************************/
-class dummy{
+
+import com.sphenon.basics.context.*;
+
+public interface Variative<T> {
+
+    public T getVariant(CallContext context);
+    public T getVariant(CallContext context, VariantSelectors variant_selectors);
 }
